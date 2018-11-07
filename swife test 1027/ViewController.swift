@@ -65,6 +65,11 @@ class ViewController: UIViewController {
         result.text = ""
         flag = 4
     }
+    @IBAction func buttonPercent(_ sender: Any) {
+        temp = Double(result.text!)!
+        result.text = ""
+        flag = 5
+    }
     @IBAction func buttonResult(_ sender: Any) {
         if flag == 1{
             temp = temp +  Double(result.text!)!
@@ -78,14 +83,14 @@ class ViewController: UIViewController {
         if flag == 4{
             temp = temp /  Double(result.text!)!
         }
+        if flag == 5{
+            temp = temp *  0.01 * Double(result.text!)!
+        }
         result.text="\(temp)"
     }
     @IBAction func buttonAC(_ sender: Any) {
         result.text = ""
     }
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
